@@ -1,0 +1,447 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none; 
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 90%;
+}
+
+/*
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+*/
+
+
+
+#top-bar{
+    padding: 4px;
+    background-color: #f27730;
+    color: black;
+    background: radial-gradient(#f27730, #f27730, #c6632a);
+    cursor: default;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    min-width: 33.33%;
+    max-width: 100%;
+    height: 80vh;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.column-button {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    font-size: 170%;
+    text-align: center;
+    outline: none;
+}
+
+.column-mid{
+    width: 33.33%;
+    min-width: 33.33%;
+    max-width: 100%;
+    float: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*BACK BUTTON*/
+#back, #back:visited, #back:active{
+    font-size: 200%;
+}
+
+#backa, #backa:visited, #backa:active{
+    color: black;
+}
+
+#hs-graident{
+    color: black;
+/*    -webkit-mask-image: linear-gradient(to top left, rgba(0, 0, 0, 0), rgb(0, 0, 0));*/
+}
+
+
+
+/*===============Select File==================*/
+
+#folder-select-file{
+    display: none;
+    z-index: -1;
+    width: 0.1px;
+    height: 0.1px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+#folder-select-file-label{
+    background-color: #676767;
+    border: 4px solid #f27730;
+    padding: 8px;
+    color: black;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    
+}
+
+#folder-select-file-text{
+    font-weight: bold;
+}
+
+#folder-form{
+    min-width: 145px;
+    height: 2vh;
+    
+}
+
+/*===============Select File==================*/
+
+/*STYLE FOR THE MIDDLE BAR*/
+#planner-buttons, #folder-buttons, #notes-save-buttons{
+    padding: 8px;
+    padding-left: 4px;
+    min-width: 195px;
+    font-family: Verdana, Geneva, sans-serif;
+    text-align: center;
+    overflow-y: initial;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
+}
+
+/*STYLE FOR THE BUTTONS*/
+#planner-buttons button, #folder-buttons button, #notes-save-buttons button, #notes-save-buttons a, #title-sections{
+    background-color: #676767;
+    color: white;
+    padding: 8px;
+    outline: none;
+    border: none;
+    font-size: 130%;
+    font-weight: 400;
+    overflow-y: initial;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#notes-save-buttons a{
+    background-color: #676767;
+    color: white;
+    padding: 8px;
+    outline: none;
+    border: none;
+    font-size: 130%;
+    font-weight: 400;
+    overflow-y: initial;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#buttons-container{
+    background-color: #676767;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+
+/*STYLE FOR THE DOM OBJECTS IN FOLDER AND PLANNER*/
+.content{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    outline: none;
+    border: 4px solid #f27730;
+    border-top: none;
+    min-width: 175px;
+    background: #ff8d4c;
+    overflow: auto;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/*STYLE FOR THE FIRST DOM OBJECT IN FOLDER AND PLANNER*/
+.content:first-child{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    outline: none;
+    border: 4px solid #f27730;
+    min-width: 175px;
+    background: #ff8d4c;
+    overflow: auto;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#planner-container{
+    word-wrap: break-word;
+    
+}
+
+#planner-textarea{
+    min-width: 100%;
+    height: 100px;
+    resize: none;
+    outline: none;
+/*    Make border*/
+    overflow: auto;
+    background-color: #ff8d4c;
+    border: 4px solid #f27730;
+}
+
+.subject-input{
+    outline: none;
+    border: none;
+    width: auto;
+    background-color: #ff8d4c;
+    overflow: break;
+    font-family:  Verdana, Geneva, sans-serif;
+    font-size: 90%;
+}
+
+.subject-input::placeholder{
+    color: black;
+    font-family:  Verdana, Geneva, sans-serif;
+    font-size: 110%;
+}
+
+#close{
+    float: right;
+    display: inline-block;
+    margin-right: 5px;
+    color: #676767;
+    position: static;
+    overflow: auto;
+}
+
+#close:hover{
+    color: black;
+}
+
+#planner-info{
+    overflow-y: scroll;
+    
+}
+
+#folder-info{
+    overflow-y: scroll;
+}
+
+#notes-info{
+/*    min-width: 268px;*/
+    overflow-y: scroll;
+}
+
+#notes-writing{
+    border: 4px solid #f27730;
+}
+
+#settings-button{
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    outline: none;
+    border: none;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+/* ---------------------- MODAL ------------------------*/
+
+/* The Modal (background) */
+.modal-container {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    border: 4px solid #f27730;
+}
+
+#modal-button-one{
+    cursor: pointer;
+}
+
+/* ---------------------- MODAL ------------------------*/
+
+
+/* SETTINGS CSS */
+
+br{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.setting{
+    background-color: #676767;
+    border: 4px solid #f27730;
+    padding: 8px;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    font-size: 140%;
+    
+}
+
+h2.title{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#color-change{
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 110%;
+}
+
+#default{
+    background-color: white;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 110%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#settings-left-side{
+    width: 50%;
+    height: 160px;
+    min-height: 380px;
+    display: inline-block;
+    padding-left: 5%;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
+
+#settings-right-side{
+    width: 40%;
+    height: 80vh;
+    display: inline-block;
+    padding-left: 18%;
+    float: right;
+}
+
+
+
+/* The checkbox-container */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 138%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkbox-checkmark {
+    background-color: #f27730;
+}
+
+/* Create the checkbox-checkmark/indicator (hidden when not checked) */
+.checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkbox-checkmark when checked */
+.checkbox-container input:checked ~ .checkbox-checkmark:after {
+    display: block;
+}
+
+/* Style the checkbox-checkmark/indicator */
+.checkbox-container .checkbox-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* SETTINGS CSS */
+
+.settings-reajust-hide{
+    display: none;
+    position: fixed;
+}
+
+.settings-reajust-show{
+    width: 49.5%;
+}
